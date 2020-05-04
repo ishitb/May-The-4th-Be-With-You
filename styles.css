@@ -18,6 +18,11 @@ body {
     overflow: hidden;
 }
 
+audio {
+    opacity: 0;
+    position: absolute;
+}
+
 .back {
     position: absolute;
     height: 100%;
@@ -39,7 +44,7 @@ h1 {
     -webkit-background-clip: text;
     color: transparent;
     overflow-wrap: normal;
-    animation: text 5s linear forwards 0.5s, gone 3s forwards 5s;
+    animation: text 15s linear forwards 0.5s, gone 3s forwards 15s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,22 +91,29 @@ p {
     z-index: 100;
     position: absolute;
     height: 0rem;
+    opacity: 0;
     width: 1.4rem;
-    border-bottom: solid 4px grey;
-	border-top: solid 5px grey;
+    border-bottom: solid 1.6rem #333;
+	border-top: solid 0.8rem #333;
     border-radius: 5px;
-    background: linear-gradient(to right, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); 
+    background: linear-gradient(to right, #666 0%,rgba(204,204,204,1) 100%); 
     bottom: 24.5%;
-    animation: saberhold 2s forwards 5s;
+    animation: saberhold 2s forwards 15s;
 }
 
 @keyframes saberhold{
-    from {
-        height: 0
+    0% {
+        height: 0rem;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
     }
     
-    to {
-        height: 5.5rem;
+    100% {
+        height: 6.5rem;
+        opacity: 1;
     }
 }
 
@@ -110,9 +122,9 @@ p {
     z-index: 99;
     width: 1rem;
     background-color: red;
-    animation: on 5s forwards 7s;
+    animation: on 5s forwards 17s;
     transform-origin: bottom;
-    bottom: 24.5%;
+    bottom: 25.5%;
     border-radius: 12px 12px 0 0;
     filter: blur(1px);
     -webkit-filter: blur(1px);
@@ -133,7 +145,7 @@ p {
 img {
     position: absolute;
     opacity: 0;
-    animation: fade-in 3s forwards 7s;
+    animation: fade-in 3s forwards 17s;
     padding-left: 0.5rem;
 
 }
