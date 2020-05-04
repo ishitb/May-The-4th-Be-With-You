@@ -1,0 +1,68 @@
+@font-face {
+    font-family: starwars;
+    src: url("./assets/Starjedi.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: starwars;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1) !important;
+    background-image: url("./assets/main.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.3);
+}
+
+h1 {
+    text-align: center;
+    z-index: 99;
+    font-size: 50rem;
+    background: url("./assets/saga.jpg") no-repeat center center/contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    overflow-wrap: normal;
+    animation: text 20s linear forwards 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 1.3rem;
+}
+
+h1 p:nth-child(1) {
+    margin-bottom: -7.7rem;
+}
+
+@keyframes text {
+    from {
+        font-size: 50rem;
+    }
+
+    to {
+        font-size: 9rem;
+    }
+}
+
+.saber {
+    position: absolute;
+    width: 0.5rem;
+    height: 20rem;
+    background-color: red;
+}
