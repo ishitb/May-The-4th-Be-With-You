@@ -96,7 +96,7 @@ p {
     border-bottom: solid 1.6rem #333;
 	border-top: solid 0.8rem #333;
     border-radius: 5px;
-    background: linear-gradient(to right, #666 0%,rgba(204,204,204,1) 100%); 
+    background: linear-gradient(to right, #333, black, #ccc, black, #333); 
     bottom: 24.5%;
     animation: saberhold 2s forwards 15s;
 }
@@ -145,7 +145,7 @@ p {
 img {
     position: absolute;
     opacity: 0;
-    animation: fade-in 3s forwards 17s;
+    animation: fade-in 5s forwards 17s;
     padding-left: 0.5rem;
 
 }
