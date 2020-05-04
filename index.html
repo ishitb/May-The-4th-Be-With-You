@@ -7,12 +7,17 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <audio autoplay="true">
+        <audio class="theme" autoplay="true">
             <source
                 src="./assets/Star Wars- The Imperial March (Darth Vader s Theme).mp3"
                 type="audio/mp3"
             />
         </audio>
+
+        <audio class="light">
+            <source src="./assets/sabre.mp3" type="audio/mp3" />
+        </audio>
+
         <div class="back">
             <!-- <img src="./assets/main.jpg" alt=""> -->
         </div>
@@ -29,21 +34,31 @@
         <img src="./assets/vader.png" alt="" />
 
         <script type="text/javascript">
-            var x = document.querySelector("audio");
+            var x = document.querySelector(".theme");
+            var y = document.querySelector(".light")
             var vol = 1;
             setTimeout(
                 () => {
                     setInterval(() => {
-                        vol = vol - 0.1
-                        if(vol > 0.1) {
-                            x.volume = vol
-                            console.log(x.volume)
+                        vol = vol - 0.1;
+                        if (vol > 0.1) {
+                            x.volume = vol;
+                            console.log(x.volume);
                         }
-                    }, 800)
+                    }, 800);
                 },
 
                 10000,
             );
+
+            setTimeout(() => {
+                x.pause();
+            }, 25000);
+
+            setTimeout(() => {
+                y.play()
+            }, 18000)
+
         </script>
     </body>
 </html>
