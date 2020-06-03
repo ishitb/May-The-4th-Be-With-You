@@ -37,11 +37,11 @@ audio {
 
 h1 {
     text-align: center;
+    background-clip: text !important;
     z-index: 99;
     font-size: 9rem;
     background: url("./assets/saga.jpg") no-repeat center center/contain;
-    background-clip: text;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     color: transparent;
     overflow-wrap: normal;
     animation: text 15s linear forwards 0.5s, gone 3s forwards 15s;
